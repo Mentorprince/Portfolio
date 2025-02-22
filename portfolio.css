@@ -1,2 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
 
+:root{
+    --primary-colour: #E3000F;
+    --secondary-colour: #003B65;
+    --accent-colour: #F0BD2D;
+    --text-colour: #101010;
+    --font: 'poppins';
+}
+
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: 100px;
+    background: var(--accent-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+.address p {
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left;
+    color: var(--text-colour);
+}
+
+/* Address Section */
+.address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /*background: var(--secondary-colour);*/
+    color: var(--text-colour);
+}
+
+.address-img img {
+    width: 45px;
+    height: auto;
+    border-radius: 100%;
+    margin: 1em;
+}
+
+/*End of banner and beginning of Header*/
+
+header {
+    width: 100%;
+    height: 60px;
+    background: var(--secondary-colour);
+    box-shadow: 0, 5px, 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 100px;
+    z-index: 1000;
+}
+
+header .site-icon img {
+    width: 150px;
+    height: auto;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-colour);
+}
+
+.contact-me{
+    width: 15%;
+}
+.cont-btn {
+    padding: 10px 20px;
+    width: 60%;
+    position: relative;
+    background: var(--primary-colour);
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cont-btn:hover{
+    background-image: linear-gradient(to bottom, #E3000F, #be0410);
+    color: #fff;
+    transition: ease-in-out 4s;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    height: 85vh;
+    top: 160px;
+    margin: 0;
+    padding: 10px 60px;
+    padding-bottom: 20px;
+    position: relative;
+    background: linear-gradient(to right, rgba(0,59,101, 0.9) 30%, rgba(234, 223, 210, 0.884) 50%), url('luke-peters2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    z-index: 0;
+}
+
+.introductory-text h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 0;
+    line-height: 1;
+    color: var(--secondary-colour);
+    /*text-shadow: 1px 1px 2px #101010;*/
+}
+
+.introductory-text h3 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 0;
+    line-height: 1;
+    color: var(--primary-colour);
+}
+
+.introductory-text p {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 0;
+    line-height: 1.5;
+    color: var(--text-colour);
+}
+
+.introductory-text h4{
+    font-size: 1.26em;
+    font-weight: 800;
+    text-align: left;
+    letter-spacing: 4px;
+    color: #012447;
+    text-shadow: 0 5px 15px #012447;
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.introductory-text {
+    width: 50%;
+    max-height: fit-content;
+    margin-bottom: 20px;
+    padding: 40px;
+    padding-right: 50px;
+    margin-left: -10%;
+    align-items: left;
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-color: #25AFF3;
+    }
+    25% {
+        border-color: #003B65;
+    }
+    50% {
+        border-color: #003B65;
+    }
+    75% {
+        border-color: #25AFF3;
+    }
+    100% {
+        border-color: #003B65;
+    }
+}
+
+.clients {
+    animation: borderColorChange 5s infinite linear;
+}
+
+.profile-image{
+    width: 50%;
+    padding: 25px;
+    max-height: fit-content;
+    position: relative;
+}
+.profile-image img {
+    width: 55%;
+    height: auto;
+    padding: 20px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: -10%;
+    margin-bottom: 20px;
+    /*background: rgba(223, 220, 62, 0.9);*/
+    border: 5px solid #25AFF3;
+    box-shadow: 0 5px 15px #25AFF3;
+    transform: translate(50%);
+}
+
+.cta-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: last baseline;
+    justify-content: left;
+}
+
+.wdp-btn {
+    background-image: linear-gradient(to bottom, #024e85, #003b65);
+    color: #fcfcfc;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.cta-buttons button:hover {
+    transition: ease-in 0.4s;
+    background: #F0BD2D;
+    color: #ece8ce;
+}
+
+.grd-btn{
+    background-image: linear-gradient(to bottom, #E3000F, #be0410);
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: none;
+    /*transition: background 0.3s ease;*/
+    cursor: pointer;
+}
+
+/* AOS Section */
+.aos {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    top: 160px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(rgba(231, 232, 235, 0.8), rgba(223, 228, 236, 0.8)), url('dribble.gif');
+    color: #fff;
+    text-align: center;
+}
+
+/* Graphic Design Section */
+.graphic-and-web-dev {
+    width: 100%;
+    height: 85vh;
+    top: -60%;
+    margin: -15% 20px 20px 20px;
+    box-sizing: content-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    background: #012447;
+    box-shadow: 0 5px 15px #012447;
+    border: 0 0 0 25px solid #024e85;
+    border-radius: 10px;
+    /*background: #fff;*/
+    text-align: justify;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.graphic-and-web-dev h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #0787e2;
+    margin: 20px 40px 20px 40px;
+    
+}
+
+.graphic-and-web-dev p {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #ece8ce;
+    margin: 0px 40px 20px 40px;
+}
+
+.graphic-img img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #E3000F, #101010);
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--text-colour);
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    width: 100%;
+    height: 150vh;
+    padding: 100px 20px 100px 20px ;
+    margin: 0;
+    top: 160px;
+    gap: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.8),  rgba(255,255,0,0.5)), url('luke-peter1.jpg');
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonials h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--secondary-colour);
+    margin-bottom: 40px;
+}
+
+.clients {
+    background-image: linear-gradient(to top, #012447 80%, #ece8ce 20%) ;
+    height: 50vh;
+    opacity: 0.9;
+    padding: 25px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 3px solid #101010;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    text-align: left;
+}
+
+.clients img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+    border: 1px solid var(--text-colour);
+}
+
+.clients h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--accent-colour);
+    margin-bottom: 10px;
+}
+
+.clients p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+    padding: 20px;
+    background: var(--secondary-colour);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: -160px;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+footer a {
+    color: var(--accent-colour);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
